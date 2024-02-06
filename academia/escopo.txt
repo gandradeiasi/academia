@@ -1,0 +1,11 @@
+O site vai ter apenas uma tela, com as demais interações sendo feitas por pop-up
+
+A tela principal vai mostrar o exercício que deve ser feito agora e três botões principais: concluído, ocupado, fatiga
+
+O botão concluído move o exercício para o final da fila
+
+O botão ocupado coloca o próximo exercício na frente do atual
+
+O botão fatiga adia o exercício para o dia seguinte
+
+Também deve ter um botão "editar" que abre um pop-up com a lista de exercício, que podem ter o nome editados, serem excluídos e um botão para adicionar novos exercícios
