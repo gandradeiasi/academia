@@ -2,7 +2,31 @@ render();
 
 var botao_editar = document.querySelector("#editar");
 
-botao_editar.addEventListener(abrePopUpEditar);
+botao_editar.addEventListener('click', abrePopUpEditar);
+
+
+
+function abrePopUpEditar() {
+    var pop_up_editar = inicializaPopPup("#pop-up-editar");
+
+    if (!pop_up_editar) return;
+    
+    var lista_exercicios_inner_html = '';
+    
+    var dados = getData();
+
+    dados.forEach(exercicio => {
+        lista_exercicios_inner_html += `
+            <li class="linha-exercicio">
+                <p>${exercicio.nome}</p>
+                <button data-funcao="editar-exercicio" data-nome="${exercicio.nome}">Editar</button>
+                <button data-funcao="excluir-exercicio" data-nome="${exercicio.nome}">Excluir</button>
+            </li>
+        `;
+    });
+
+    return `<ul class="lista-exercicios">${lista_exercicios_inner_html}</ul>`;
+}
 
 function render() {
     var div_exercicios = document.querySelector('#div-exercicio');
@@ -27,7 +51,7 @@ function obtemProximoExercicio() {
     var data_atual = new Date();
 
     var exercícios_permitidos_hoje = dados.filter(function(exercicio) {
-        return exercicio.dia_permitido < data_atual;
+        return exercicio.data_permitida < data_atual;
     });
 
     return exercícios_permitidos_hoje[0];

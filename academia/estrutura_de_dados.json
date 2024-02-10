@@ -1,7 +1,6 @@
 [
     {
         nome: "{{ Nome do Exercício }}",
-        dia_permitido: "{{ dia mínimo para o Exercício voltar a ser feito }}"
-        ultima_vez: "{{ última vez que o exercício foi feito }}"
+        data_permitida: "{{ dia mínimo para o Exercício voltar a ser feito }}"
     }
 ]

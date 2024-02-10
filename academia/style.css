@@ -1,1 +1,5 @@
 .container { max-width: 1000px; display: block; margin: auto; }
+
+.pop-up { z-index: 1; display: none; justify-content: center ; position: absolute; background-color: gray; opacity: 0.5; left: 0; top: 0; width: 100%; height: 100%; }
+.pop-up.ativo { display: flex; }
+.pop-up .pop-up-window { margin: 1rem; max-width: 720px; width: 100%; background-color: white; padding: 1rem; max-height: 500px; }
